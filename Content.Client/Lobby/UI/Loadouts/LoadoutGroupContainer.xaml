@@ -1,6 +1,16 @@
 <BoxContainer xmlns="https://spacestation14.io"
          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
          Orientation="Vertical">
+    <!-- Frontier: Loadout search bar -->
+    <BoxContainer Orientation="Horizontal"
+                HorizontalExpand="True">
+        <LineEdit
+            Name="SearchBar"
+            PlaceHolder="{Loc 'loadout-menu-search'}"
+            HorizontalExpand="True">
+        </LineEdit>
+    </BoxContainer>
+    <!-- End Frontier -->
     <PanelContainer StyleClasses="AngleRect" HorizontalExpand="True">
         <BoxContainer Name="LoadoutsContainer" Orientation="Vertical"/>
     </PanelContainer>

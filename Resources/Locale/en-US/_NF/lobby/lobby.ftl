@@ -29,7 +29,7 @@ frontier-lobby-medical-description = Frontier's medical dispatch hub. Here you c
    - Start or find a medical response crew
    - Socialize with other medics
    - Purchase medical specialist ships
-   - Drop off medical bounties  
+   - Drop off medical bounties
  Some of the roles on this station are whitelist-only and require an application in the discord to be accepted.
 
 frontier-lobby-nfsd-subtext = The center of operations for the Sheriffs department.
@@ -51,3 +51,6 @@ frontier-lobby-crew-class-prefix = [bold][color=#A88B5E]Classes:[/color][/bold]{
 frontier-lobby-crew-size = [bold][color=#A88B5E]Size:[/color][/bold] {$size}
 frontier-lobby-crew-class-advertisement = [bold][color=#A88B5E]Advertisement:[/color][/bold]
 frontier-lobby-crew-only-hide-jobless = Hide jobless ships
+
+# Loadout search
+loadout-menu-search = Search Items

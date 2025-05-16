@@ -23,6 +23,13 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
         RobustXamlLoader.Load(this);
         _groupProto = groupProto;
 
+        // Frontier: loadout search bar
+        SearchBar.OnTextChanged += _ =>
+        {
+            // Is the closure here going to cause problems?
+            RefreshLoadouts(profile, loadout, session, collection);
+        };
+        // End Frontier
         RefreshLoadouts(profile, loadout, session, collection);
     }
 
@@ -82,8 +89,9 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
 
             var enabled = loadout.IsValid(profile, session, loadoutProto, collection, out var reason);
             var loadoutContainer = new LoadoutContainer(loadoutProto, !enabled, reason);
+            var loadoutName = string.IsNullOrEmpty(loadProto.Name) ? loadoutSystem.GetName(loadProto) : loadProto.Name; // Frontier: allow overriding loadout names
             loadoutContainer.Select.Pressed = pressed;
-            loadoutContainer.Text = string.IsNullOrEmpty(loadProto.Name) ? loadoutSystem.GetName(loadProto) : loadProto.Name; // Frontier: allow overriding loadout names
+            loadoutContainer.Text = loadoutName; // Frontier: allow overriding loadout names
 
             loadoutContainer.Select.OnPressed += args =>
             {
@@ -92,8 +100,17 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
                 else
                     OnLoadoutUnpressed?.Invoke(loadoutProto);
             };
-
-            LoadoutsContainer.AddChild(loadoutContainer);
+            // Frontier: loadout search bar
+            if (SearchBar.Text.Trim().Length != 0)
+            {
+                if (loadoutName.ToLowerInvariant().Contains(SearchBar.Text.Trim().ToLowerInvariant()))
+                    LoadoutsContainer.AddChild(loadoutContainer);
+            }
+            else
+            {
+                LoadoutsContainer.AddChild(loadoutContainer);
+            }
+            // End Frontier
         }
 
         // Frontier: loadoutGroup subgroups
