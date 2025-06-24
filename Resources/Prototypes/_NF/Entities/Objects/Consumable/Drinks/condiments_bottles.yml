@@ -133,3 +133,20 @@
   - type: Drink
   - type: Label
     currentLabel: reagent-name-soysauce
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkMayoJug
+  name: mayo jug
+  description: The quick fix for dry sandwiches.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 150
+        reagents:
+        - ReagentId: Mayo
+          Quantity: 150
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-mayo
