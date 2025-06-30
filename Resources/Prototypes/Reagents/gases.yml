@@ -103,6 +103,17 @@
             type: Vox
         clear: true
         time: 5
+      - !type:ExplosionReactionEffect
+        conditions:
+          - !type:ReagentThreshold
+            min: 0.5
+          - !type:OrganType
+            type: Vox
+        explosionType: Default
+        intensityPerUnit: 5000000
+        maxIntensity: 100
+        maxTotalIntensity: 5000000
+        intensitySlope: 5
         # Frontier: Sheleg start block
       - !type:Oxygenate
         conditions:
