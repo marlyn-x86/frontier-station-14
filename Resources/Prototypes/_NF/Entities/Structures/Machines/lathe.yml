@@ -477,6 +477,7 @@
     - NFUniformCloaks
     - NFUniformCommand
     - NFWallets
+    - NFTowelsCommon
     # keeping the dynamicPacks from the parent
 
 - type: entity

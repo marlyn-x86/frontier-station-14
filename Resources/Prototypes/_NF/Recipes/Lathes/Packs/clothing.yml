@@ -196,6 +196,34 @@
   - ClothingHeadHatStcCap
 
 - type: latheRecipePack
+  id: NFTowelsCommon
+  recipes:
+  # Chromatic towels
+  - TowelColorWhite
+  - TowelColorPurple
+  - TowelColorRed
+  - TowelColorBlue
+  - TowelColorDarkBlue
+  - TowelColorLightBlue
+  - TowelColorTeal
+  - TowelColorBrown
+  - TowelColorLightBrown
+  - TowelColorGray
+  - TowelColorGreen
+  - TowelColorDarkGreen
+  - TowelColorOrange
+  - TowelColorBlack
+  - TowelColorPink
+  - TowelColorYellow
+  - TowelColorMaroon
+  # Not sure how special these should be?
+  - TowelColorGold
+  - TowelColorSilver
+  # Other patterns
+  - TowelColorMime
+  - TowelColorNT
+
+- type: latheRecipePack
   id: NFPirateClothing
   recipes:
   # Hats

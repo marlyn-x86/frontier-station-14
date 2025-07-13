@@ -19,6 +19,7 @@
   recipes:
   - Durathread # Frontier
   - FoodCondimentSqueezeBottleClear # Frontier
+  - TowelColorWhite # Frontier
 
 - type: latheRecipePack
   id: NFService

@@ -48,6 +48,15 @@
     Plastic: 300
     Glass: 500
 
+- type: latheRecipe
+  abstract: true
+  id: NFBaseTowelRecipe
+  parent: NFBaseJumpsuitRecipe
+  categories:
+  - Tools
+  materials:
+    Cloth: 300
+
 # Recipes
 
 # region Hats
@@ -1302,3 +1311,120 @@
   result: ClothingBackpackSatchelLeather
   materials:
     Cloth: 400
+
+# region Towels
+- type: latheRecipe
+  id: TowelColorWhite
+  parent: NFBaseTowelRecipe
+  result: TowelColorWhite
+
+- type: latheRecipe
+  id: TowelColorPurple
+  parent: NFBaseTowelRecipe
+  result: TowelColorPurple
+
+- type: latheRecipe
+  id: TowelColorRed
+  parent: NFBaseTowelRecipe
+  result: TowelColorRed
+
+- type: latheRecipe
+  id: TowelColorBlue
+  parent: NFBaseTowelRecipe
+  result: TowelColorBlue
+
+- type: latheRecipe
+  id: TowelColorDarkBlue
+  parent: NFBaseTowelRecipe
+  result: TowelColorDarkBlue
+
+- type: latheRecipe
+  id: TowelColorLightBlue
+  parent: NFBaseTowelRecipe
+  result: TowelColorLightBlue
+
+- type: latheRecipe
+  id: TowelColorTeal
+  parent: NFBaseTowelRecipe
+  result: TowelColorTeal
+
+- type: latheRecipe
+  id: TowelColorBrown
+  parent: NFBaseTowelRecipe
+  result: TowelColorBrown
+
+- type: latheRecipe
+  id: TowelColorLightBrown
+  parent: NFBaseTowelRecipe
+  result: TowelColorLightBrown
+
+- type: latheRecipe
+  id: TowelColorGray
+  parent: NFBaseTowelRecipe
+  result: TowelColorGray
+
+- type: latheRecipe
+  id: TowelColorGreen
+  parent: NFBaseTowelRecipe
+  result: TowelColorGreen
+
+- type: latheRecipe
+  id: TowelColorDarkGreen
+  parent: NFBaseTowelRecipe
+  result: TowelColorDarkGreen
+
+- type: latheRecipe
+  id: TowelColorGold
+  parent: NFBaseTowelRecipe
+  result: TowelColorGold
+
+- type: latheRecipe
+  id: TowelColorOrange
+  parent: NFBaseTowelRecipe
+  result: TowelColorOrange
+
+- type: latheRecipe
+  id: TowelColorBlack
+  parent: NFBaseTowelRecipe
+  result: TowelColorBlack
+
+- type: latheRecipe
+  id: TowelColorPink
+  parent: NFBaseTowelRecipe
+  result: TowelColorPink
+
+- type: latheRecipe
+  id: TowelColorYellow
+  parent: NFBaseTowelRecipe
+  result: TowelColorYellow
+
+- type: latheRecipe
+  id: TowelColorMaroon
+  parent: NFBaseTowelRecipe
+  result: TowelColorMaroon
+
+- type: latheRecipe
+  id: TowelColorSilver
+  parent: NFBaseTowelRecipe
+  result: TowelColorSilver
+
+- type: latheRecipe
+  id: TowelColorMime
+  parent: NFBaseTowelRecipe
+  result: TowelColorMime
+
+- type: latheRecipe
+  id: TowelColorNT
+  parent: NFBaseTowelRecipe
+  result: TowelColorNT
+
+# CentComm and Syndicate towel recipe defines should probably be used in slightly different contexts?
+- type: latheRecipe
+  id: TowelColor
+  parent: NFBaseTowelRecipe
+  result: TowelColor
+
+- type: latheRecipe
+  id: TowelColor
+  parent: NFBaseTowelRecipe
+  result: TowelColor
