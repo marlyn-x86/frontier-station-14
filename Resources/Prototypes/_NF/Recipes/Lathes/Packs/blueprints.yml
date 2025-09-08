@@ -503,6 +503,16 @@
   - SuperMatterBinStockPart
   - PicoManipulatorStockPart
 
+# region Medical & Service (Botany)
+- type: latheRecipePack
+  id: NFBlueprintsMedServiceBotany
+  recipes:
+  - BiogeneratorMachineCircuitboard
+  - HydroponicsTrayMachineCircuitboard
+  - SeedExtractorMachineCircuitboard
+  - PlantAnalyzer
+  - PlantBagOfHolding
+
 # region Common
 - type: latheRecipePack
   id: NFBlueprintsCommon

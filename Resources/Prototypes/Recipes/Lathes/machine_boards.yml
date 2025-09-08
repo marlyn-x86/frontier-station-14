@@ -55,6 +55,14 @@
   - Machines
   - General
 
+- type: latheRecipe
+  abstract: true
+  id: BaseBotanyMachineRecipeCategory
+  categories:
+  - Machines
+  - Service
+  - Medical
+
 ## Recipes
 
 ## Non-circuit imprinter (no second category)
@@ -272,12 +280,12 @@
 
 # Hydroponics
 - type: latheRecipe
-  parent: [ BaseCircuitboardRecipe, BaseServiceMachineRecipeCategory ]
+  parent: [ BaseCircuitboardRecipe, BaseBotanyMachineRecipeCategory ]
   id: HydroponicsTrayMachineCircuitboard
   result: HydroponicsTrayMachineCircuitboard
 
 - type: latheRecipe
-  parent: [ BaseCircuitboardRecipe, BaseServiceMachineRecipeCategory ]
+  parent: [ BaseCircuitboardRecipe, BaseBotanyMachineRecipeCategory ]
   id: SeedExtractorMachineCircuitboard
   result: SeedExtractorMachineCircuitboard
 
@@ -380,7 +388,7 @@
   result: ExosuitFabricatorMachineCircuitboard
 
 - type: latheRecipe
-  parent: [ BaseCircuitboardRecipe, BaseServiceMachineRecipeCategory ]
+  parent: [ BaseCircuitboardRecipe, BaseBotanyMachineRecipeCategory ]
   id: BiogeneratorMachineCircuitboard
   result: BiogeneratorMachineCircuitboard
 

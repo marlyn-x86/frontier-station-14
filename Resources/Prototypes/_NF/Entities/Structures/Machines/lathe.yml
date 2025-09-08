@@ -42,6 +42,7 @@
     runningState: icon
     staticPacks:
     - NFServiceTechfabDeprecatedStatic
+    - NFBotanyStatic
     - NFPaperAndPaperAccessories
     - ReportingStatic # DeltaV
   - type: EmagLatheRecipes
@@ -77,6 +78,7 @@
   - type: Lathe
     staticPacks:
     - NFServiceTechfabDeprecatedStatic
+    - NFBotanyStatic
     - NFPaperAndPaperAccessories
     - ReportingStatic # DeltaV
     - NFMcServiceTechfabStatic

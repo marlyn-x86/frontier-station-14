@@ -1,0 +1,14 @@
+# botany is a hybrid domain split between service and medical
+- type: latheRecipePack
+  id: NFBotanyStatic
+  recipes:
+  - PlantBGoneSprayEmpty
+  - WeedSprayEmpty
+  - PestSprayEmpty
+  - PlantBag
+  - HydroponicsToolMiniHoe
+  - HydroponicsToolScythe
+  - HydroponicsToolHatchet
+  - HydroponicsToolSpade
+  - HydroponicsToolClippers
+  - DiseaseSwab

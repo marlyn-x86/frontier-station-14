@@ -529,6 +529,7 @@
     - EmptyMedkitsStatic
     - SurgeryStatic
     - NFMedicalStatic # Frontier
+    - NFBotanyStatic # Frontier
     # dynamicPacks: # Frontier
     # - Chemistry # Frontier
   - type: Machine
