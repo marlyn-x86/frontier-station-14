@@ -80,6 +80,7 @@ namespace Content.Client.Entry
 
         public override void Init()
         {
+            base.Init();
             ClientContentIoC.Register();
 
             foreach (var callback in TestingCallbacks)
