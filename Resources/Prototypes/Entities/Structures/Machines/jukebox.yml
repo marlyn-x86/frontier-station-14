@@ -92,4 +92,8 @@
   - type: EmptyOnMachineDeconstruct
     containers:
       - storagebase
+  - type: AddComponentToStorageFills
+    addComponents:
+    - type: StaticPrice
+      price: 0
   # End Frontier: Music Discs
