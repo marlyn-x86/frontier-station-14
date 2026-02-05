@@ -64,8 +64,9 @@ namespace Content.Server.Carrying
             SubscribeLocalEvent<CarryingComponent, GetVerbsEvent<InnateVerb>>(AddInsertCarriedVerb);
             SubscribeLocalEvent<CarryingComponent, VirtualItemDeletedEvent>(OnVirtualItemDeleted);
             SubscribeLocalEvent<CarryingComponent, BeforeThrowEvent>(OnThrow);
-            SubscribeLocalEvent<CarryingComponent, EntParentChangedMessage>(OnParentChanged);
+            SubscribeLocalEvent<CarryingComponent, EntParentChangedMessage>(OnCarrierParentChanged);
             SubscribeLocalEvent<CarryingComponent, MobStateChangedEvent>(OnMobStateChanged);
+            SubscribeLocalEvent<BeingCarriedComponent, EntParentChangedMessage>(OnCarriedParentChanged);
             SubscribeLocalEvent<BeingCarriedComponent, InteractionAttemptEvent>(OnInteractionAttempt);
             SubscribeLocalEvent<BeingCarriedComponent, MoveInputEvent>(OnMoveInput);
             SubscribeLocalEvent<BeingCarriedComponent, UpdateCanMoveEvent>(OnMoveAttempt);
@@ -158,13 +159,22 @@ namespace Content.Server.Carrying
             // End Frontier
         }
 
-        private void OnParentChanged(EntityUid uid, CarryingComponent component, ref EntParentChangedMessage args)
+        private void OnCarrierParentChanged(EntityUid uid, CarryingComponent component, ref EntParentChangedMessage args)
         {
             var xform = Transform(uid);
             if (xform.MapUid != args.OldMapId || xform.ParentUid == xform.GridUid)
                 return;
 
             DropCarried(uid, component.Carried);
+        }
+
+        private void OnCarriedParentChanged(EntityUid uid, BeingCarriedComponent component, ref EntParentChangedMessage args)
+        {
+            var xform = Transform(uid);
+            if (xform.MapUid != args.OldMapId || xform.ParentUid == xform.GridUid)
+                return;
+
+            DropCarried(component.Carrier, uid);
         }
 
         private void OnMobStateChanged(EntityUid uid, CarryingComponent component, MobStateChangedEvent args)
